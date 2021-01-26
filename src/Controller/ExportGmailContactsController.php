@@ -1,14 +1,15 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts;
+namespace Minhajul\ExportGmailContacts\Controller;
 
 use Google_Client;
 use Google_Service_Drive;
 use Google_Service_People;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Laravel\Socialite\Facades\Socialite;
 
-class ExportGmailContacts
+class ExportGmailContactsController extends Controller
 {
     public function handle()
     {
@@ -54,4 +55,5 @@ class ExportGmailContacts
 
         return [];
     }
+
 }
