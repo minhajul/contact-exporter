@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Minhajul\ExportGmailContacts\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ExportGmailContactsCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'export-gmail-contacts';
 
     public $description = 'My command';
 

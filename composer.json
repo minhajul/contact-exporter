@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "minhajul/export-gmail-contacts",
+    "description": "export-gmail-contacts",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "minhajul",
+        "export-gmail-contacts"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/minhajul/export-gmail-contacts",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Md Minhajul Islam",
+            "email": "kmsohelinfo@gmail.com",
             "role": "Developer"
         }
     ],
@@ -25,13 +25,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Minhajul\\ExportGmailContacts\\": "src",
+            "Minhajul\\ExportGmailContacts\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Minhajul\\ExportGmailContacts\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Minhajul\\ExportGmailContacts\\ExportGmailContactsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "ExportGmailContacts": "Minhajul\\ExportGmailContacts\\ExportGmailContactsFacade"
             }
         }
     },

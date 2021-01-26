@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Minhajul\ExportGmailContacts\Tests;
 
 class ExampleTest extends TestCase
 {
