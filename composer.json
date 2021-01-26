@@ -3,7 +3,8 @@
     "description": "export-gmail-contacts",
     "keywords": [
         "minhajul",
-        "export-gmail-contacts"
+        "export-gmail-contacts",
+        "download-gmail-contacts"
     ],
     "homepage": "https://github.com/minhajul/export-gmail-contacts",
     "license": "MIT",
