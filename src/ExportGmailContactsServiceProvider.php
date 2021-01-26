@@ -2,24 +2,14 @@
 
 namespace Minhajul\ExportGmailContacts;
 
-use Minhajul\ExportGmailContacts\Commands\ExportGmailContactsCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class ExportGmailContactsServiceProvider extends PackageServiceProvider
+class ExportGmailContactsServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot()
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
-        $package
-            ->name('export-gmail-contacts')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_export_gmail_contacts_table')
-            ->hasCommand(ExportGmailContactsCommand::class);
+        $this->publishes([
+            __DIR__.'/../config/export-gmail-contacts.php' => config_path('courier.php'),
+        ]);
     }
 }
