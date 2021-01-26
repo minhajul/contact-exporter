@@ -2,9 +2,9 @@
 
 namespace Minhajul\ExportGmailContacts;
 
+use Minhajul\ExportGmailContacts\Commands\ExportGmailContactsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Minhajul\ExportGmailContacts\Commands\ExportGmailContactsCommand;
 
 class ExportGmailContactsServiceProvider extends PackageServiceProvider
 {

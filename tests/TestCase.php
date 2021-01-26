@@ -3,8 +3,8 @@
 namespace Minhajul\ExportGmailContacts\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Minhajul\ExportGmailContacts\ExportGmailContactsServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
