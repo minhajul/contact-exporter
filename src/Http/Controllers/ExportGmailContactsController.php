@@ -1,6 +1,6 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts\Controller;
+namespace Minhajul\ExportGmailContacts\Http\Controllers;
 
 use Google_Client;
 use Google_Service_Drive;
@@ -11,15 +11,6 @@ use Laravel\Socialite\Facades\Socialite;
 
 class ExportGmailContactsController extends Controller
 {
-    public function handle()
-    {
-        return Socialite::driver('google')
-            ->redirectUrl(env('GMAIL_CALLBACK_URL'))
-            ->scopes(['openid', 'profile', 'email', Google_Service_People::CONTACTS_READONLY])
-            ->stateless()
-            ->redirect();
-    }
-
     public function handleProviderCallback(Request $request): array
     {
         $user = Socialite::driver('google')
