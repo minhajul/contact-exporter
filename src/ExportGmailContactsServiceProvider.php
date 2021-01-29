@@ -21,10 +21,6 @@ class ExportGmailContactsServiceProvider extends ServiceProvider
         $this->app->bind('ExportContacts', function() {
             return new ExportContacts();
         });
-
-//        $this->publishes([
-//            __DIR__ . '/../routes/export-gmail-contact.php' => base_path('routes/export-gmail-contact.php'),
-//        ], 'export-gmail-contact');
     }
 
     protected function configureRoutes()
