@@ -2,7 +2,7 @@
 
 namespace Minhajul\ExportGmailContacts;
 
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ExportGmailContactsServiceProvider extends ServiceProvider
