@@ -13,22 +13,18 @@ class ExportGmailContactsServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->publishes([
-            __DIR__ . '/../config/exportGmailContacts.php' => config_path('exportGmailContacts.php'),
-        ], 'exportGmailContacts');
-
         $this->configureRoutes();
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__ . '/../config/exportGmailContacts.php', 'exportGmailContacts'
-        );
+        $this->app->bind('ExportContacts', function() {
+            return new ExportContacts();
+        });
 
-        $this->publishes([
-            __DIR__ . '/../routes/export-gmail-contact.php' => base_path('routes/export-gmail-contact.php'),
-        ], 'export-gmail-contact');
+//        $this->publishes([
+//            __DIR__ . '/../routes/export-gmail-contact.php' => base_path('routes/export-gmail-contact.php'),
+//        ], 'export-gmail-contact');
     }
 
     protected function configureRoutes()

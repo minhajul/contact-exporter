@@ -5,11 +5,11 @@ namespace Minhajul\ExportGmailContacts;
 use Google_Service_People;
 use Laravel\Socialite\Facades\Socialite;
 
-class ExportGmailContacts
+class ExportContacts
 {
-    public static function getContacts()
+    public function getContacts()
     {
-        $redirectUrl = config('exportGmailContacts.google_callback_url');
+        $redirectUrl = config('services')['google']['redirect'];
 
         if (empty($redirectUrl)) {
             throw new \Exception('Set your google callback url first.');
