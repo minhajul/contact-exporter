@@ -26,8 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Minhajul\\ExportGmailContacts\\": "src",
-            "Minhajul\\ExportGmailContacts\\Database\\Factories\\": "database/factories"
+            "Minhajul\\ExportGmailContacts\\": "src"
         }
     },
     "autoload-dev": {

@@ -7,7 +7,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class ExportGmailContacts
 {
-    public function getContacts()
+    public static function getContacts()
     {
         $redirectUrl = config('exportGmailContacts.google_callback_url');
 
