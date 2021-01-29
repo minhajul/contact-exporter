@@ -22,13 +22,6 @@ class ExportGmailContactsServiceProvider extends ServiceProvider
 
     public function register()
     {
-//        $this->app->singleton(ExportGmailContacts::class, function (){
-//            return new ExportGmailContacts();
-//        });
-//
-//        $this->app->alias(ExportGmailContacts::class, 'ExportGmailContacts');
-
-
         $this->mergeConfigFrom(
             __DIR__ . '/../config/exportGmailContacts.php', 'exportGmailContacts'
         );
