@@ -1,12 +1,9 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts;
+namespace Minhajul\ExportGmailContacts\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Minhajul\ExportGmailContacts\ExportContacts
- */
 class ExportGmailContactsFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
