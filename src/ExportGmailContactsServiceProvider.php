@@ -2,7 +2,6 @@
 
 namespace Minhajul\ExportGmailContacts;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class ExportGmailContactsServiceProvider extends ServiceProvider
@@ -13,22 +12,15 @@ class ExportGmailContactsServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->configureRoutes();
+        $this->publishes([
+            __DIR__.'/../config/exportGmailContacts.php' => config_path('exportGmailContacts.php')
+        ]);
     }
 
     public function register()
     {
         $this->app->bind('ExportContacts', function() {
             return new ExportContacts();
-        });
-    }
-
-    protected function configureRoutes()
-    {
-        Route::group([
-            'namespace' => 'Minhajul\ExportGmailContacts\Http\Controllers'
-        ], function () {
-            $this->loadRoutesFrom(__DIR__.'/../routes/export-gmail-contact.php');
         });
     }
 }

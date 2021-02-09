@@ -9,7 +9,7 @@ use Laravel\Socialite\Facades\Socialite;
 
 class ExportContacts
 {
-    public function initiate()
+    public static function initiate()
     {
         $redirectUrl = config('services')['google']['redirect'];
 
@@ -24,15 +24,15 @@ class ExportContacts
             ->redirect();
     }
 
-    public function getContacts(): array
+    public static function getContacts(): array
     {
-        $googleClientToken = $this->getUserAccessToken(
-            $this->initiateSocialite()
+        $googleClientToken = (new self)->getUserAccessToken(
+            (new self)->initiateSocialite()
         );
 
-        $client = $this->initiateGoogleClient($googleClientToken);
+        $client = (new self)->initiateGoogleClient($googleClientToken);
 
-        return $this->initiateServicePeople($client);
+        return (new self)->initiateServicePeople($client);
     }
 
     protected function initiateSocialite()
