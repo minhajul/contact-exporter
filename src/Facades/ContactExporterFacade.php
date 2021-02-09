@@ -1,10 +1,10 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts\Facades;
+namespace Minhajul\ContactExporter\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class ExportGmailContactsFacade extends Facade
+class ContactExporterFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {

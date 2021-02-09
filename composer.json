@@ -1,12 +1,12 @@
 {
-    "name": "minhajul/export-gmail-contacts",
-    "description": "export-gmail-contacts",
+    "name": "minhajul/contact-exporter",
+    "description": "contact-exporter",
     "keywords": [
         "minhajul",
-        "export-gmail-contacts",
-        "download-gmail-contacts"
+        "contact exporter",
+        "download contact exporter"
     ],
-    "homepage": "https://github.com/minhajul/export-gmail-contacts",
+    "homepage": "https://github.com/minhajul/contact-exporter",
     "license": "MIT",
     "authors": [
         {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Minhajul\\ExportGmailContacts\\": "src"
+            "Minhajul\\ContactExporter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Minhajul\\ExportGmailContacts\\Tests\\": "tests"
+            "Minhajul\\ContactExporter\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Minhajul\\ExportGmailContacts\\ExportGmailContactsServiceProvider"
+                "Minhajul\\ContactExporter\\ContactExportServiceProvider"
             ],
             "aliases": {
-                "ExportGmailContacts": "Minhajul\\ExportGmailContacts\\ExportGmailContactsFacade"
+                "ExportGmailContacts": "Minhajul\\ContactExporter\\ContactExporterFacade"
             }
         }
     },
