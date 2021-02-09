@@ -9,19 +9,23 @@ use Laravel\Socialite\Facades\Socialite;
 
 class ContactExporter
 {
-    public static function initiate()
+    public static function initiate($provider)
     {
-        $redirectUrl = config('services')['google']['redirect'];
+        $redirectUrl = config('services')[$provider]['redirect'];
 
         if (empty($redirectUrl)) {
-            throw new \Exception('Set your google callback url first.');
+            throw new \Exception("Set your $provider callback url first");
         }
 
-        return Socialite::driver('google')
-            ->redirectUrl($redirectUrl)
-            ->scopes(['openid', 'profile', 'email', Google_Service_People::CONTACTS_READONLY])
-            ->stateless()
-            ->redirect();
+        if ($provider == 'google') {
+            return GmailContact::initiate($redirectUrl);
+        }
+
+        if ($provider == 'outlook') {
+            return OutlookContact::initiate($redirectUrl);
+        }
+
+        return throw new \Exception("You have not provided valid provider");
     }
 
     public static function getContacts(): array

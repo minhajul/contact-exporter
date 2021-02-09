@@ -13,7 +13,7 @@ class ContactExporterServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../config/exportGmailContacts.php' => config_path('exportGmailContacts.php')
+            __DIR__.'/../config/contact-exporter.php' => config_path('contact-exporter.php')
         ]);
     }
 
