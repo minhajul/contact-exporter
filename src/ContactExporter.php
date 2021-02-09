@@ -17,7 +17,7 @@ class ContactExporter
         }
 
         if ($provider == 'outlook') {
-            return OutlookContact::initiate($redirectUrl);
+            throw new \Exception("Exporting from outlook is yet to be done");
         }
 
          throw new \Exception("You have not provided valid provider");
@@ -30,7 +30,7 @@ class ContactExporter
         }
 
         if ($provider == 'outlook') {
-            return OutlookContact::get();
+            throw new \Exception("Exporting from outlook is yet to be done");
         }
 
         throw new \Exception("You have not provided valid provider");
