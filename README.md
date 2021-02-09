@@ -20,6 +20,7 @@ php artisan vendor:publish --provider="Minhajul\ExportGmailContacts\ExportGmailC
 
 
 ```php
+use Illuminate\Support\Facades\Route;
 use Minhajul\ExportGmailContacts\ExportContacts;
 
 Route::get('your-url', function () {
