@@ -8,6 +8,6 @@ class ContactExporterFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'ExportContacts';
+        return 'ContactExporter';
     }
 }

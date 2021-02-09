@@ -19,8 +19,8 @@ class ContactExporterServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('ContactExporter', function() {
-            return new ContactExporter();
-        });
+//        $this->app->bind('ContactExporter', function() {
+//            return new ContactExporter();
+//        });
     }
 }
