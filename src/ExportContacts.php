@@ -38,7 +38,7 @@ class ExportContacts
     protected function initiateSocialite()
     {
         return Socialite::driver('google')
-            ->redirectUrl(env('GMAIL_CALLBACK_URL'))
+            ->redirectUrl(config('exportGmailContacts.callback_url'))
             ->stateless()
             ->user();
     }
@@ -55,8 +55,8 @@ class ExportContacts
     protected function initiateGoogleClient($googleClientToken): Google_Client
     {
         $client = new Google_Client();
-        $client->setApplicationName("Talent Torrent");
-        $client->setDeveloperKey(env('GOOGLE_CLIENT_SECRET'));
+        $client->setApplicationName(config('exportGmailContacts.app_name'));
+        $client->setDeveloperKey(config('exportGmailContacts.GOOGLE_CLIENT_SECRET'));
         $client->addScope(Google_Service_Drive::DRIVE);
         $client->setAccessToken(json_encode($googleClientToken));
 
