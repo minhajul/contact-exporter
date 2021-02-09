@@ -1,10 +1,10 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts;
+namespace Minhajul\ContactExporter;
 
 use Illuminate\Support\ServiceProvider;
 
-class ExportGmailContactsServiceProvider extends ServiceProvider
+class ContactExporterServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -19,8 +19,8 @@ class ExportGmailContactsServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('ExportContacts', function() {
-            return new ExportContacts();
+        $this->app->bind('ContactExporter', function() {
+            return new ContactExporter();
         });
     }
 }

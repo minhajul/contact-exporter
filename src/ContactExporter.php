@@ -1,13 +1,13 @@
 <?php
 
-namespace Minhajul\ExportGmailContacts;
+namespace Minhajul\ContactExporter;
 
 use Google_Client;
 use Google_Service_Drive;
 use Google_Service_People;
 use Laravel\Socialite\Facades\Socialite;
 
-class ExportContacts
+class ContactExporter
 {
     public static function initiate()
     {
