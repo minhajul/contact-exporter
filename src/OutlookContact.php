@@ -16,7 +16,7 @@ class OutlookContact
             ->redirect();
     }
 
-    public static function getContacts(): array
+    public static function get(): array
     {
         return [];
     }

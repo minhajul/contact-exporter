@@ -26,11 +26,11 @@ class ContactExporter
     public static function getContacts($provider): array
     {
         if ($provider == 'google') {
-            return GmailContact::getContacts();
+            return GmailContact::get();
         }
 
         if ($provider == 'outlook') {
-            return OutlookContact::getContacts();
+            return OutlookContact::get();
         }
 
         throw new \Exception("You have not provided valid provider");

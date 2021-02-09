@@ -18,7 +18,7 @@ class GmailContact
             ->redirect();
     }
 
-    public static function getContacts(): array
+    public static function get(): array
     {
         $googleClientToken = (new self)->getUserAccessToken(
             (new self)->initiateSocialite()

@@ -25,12 +25,12 @@ use Minhajul\ContactExporter\ContactExporter;
 
 Route::get('your-url', function () {
     // This will redirect you to the gmail callback url 
-    return ContactExporter::initiate();
+    return ContactExporter::initiate('google');
 });
  
 Route::get('your-gmail-callback-url', function () {
     // This below code will return you the array of contacts you have saved in your gmail
-    return ContactExporter::getContacts();
+    return ContactExporter::getContacts('google');
 });
 ```
 
