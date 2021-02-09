@@ -1,4 +1,4 @@
-# Export Gmail Contacts
+# Contact Exporter
 
 If you want to get user's contacts attached with gmail, this package will save your time a lot.
 
