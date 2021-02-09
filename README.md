@@ -10,35 +10,27 @@ You can install the package via composer:
 composer require minhajul/export-gmail-contacts
 ```
 
-You can publish and run the migrations with:
+You can publish and run the config file by running the below command:
 
-```bash
-php artisan vendor:publish --provider="Minhajul\ExportGmailContacts\ExportGmailContactsServiceProvider" --tag="migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
 ```bash
 php artisan vendor:publish --provider="Minhajul\ExportGmailContacts\ExportGmailContactsServiceProvider" --tag="config"
 ```
 
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+
 ```php
+use Minhajul\ExportGmailContacts\ExportContacts;
 
-```
-
-## Testing
-
-```bash
-composer test
+Route::get('your-url', function () {
+    // This will redirect you to the gmail callback url 
+    return ExportContacts::initiate();
+});
+ 
+Route::get('your-gmail-callback-url', function () {
+    // This below code will return you the array of contacts you have saved in your gmail
+    return ExportContacts::getContacts();
+});
 ```
 
 ## Contributing
