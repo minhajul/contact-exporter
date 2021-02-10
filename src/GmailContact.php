@@ -71,7 +71,8 @@ class GmailContact
         ];
 
         $contacts = $service->people_connections->listPeopleConnections(
-            'people/me', $optParams
+            'people/me',
+            $optParams
         );
 
         $array = [];

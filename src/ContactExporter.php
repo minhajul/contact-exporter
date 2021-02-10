@@ -16,10 +16,6 @@ class ContactExporter
             return GmailContact::initiate($redirectUrl);
         }
 
-        if ($provider == 'outlook') {
-            throw new \Exception("Exporting from outlook is yet to be done");
-        }
-
          throw new \Exception("You have not provided valid provider");
     }
 
@@ -27,10 +23,6 @@ class ContactExporter
     {
         if ($provider == 'google') {
             return GmailContact::get();
-        }
-
-        if ($provider == 'outlook') {
-            throw new \Exception("Exporting from outlook is yet to be done");
         }
 
         throw new \Exception("You have not provided valid provider");
